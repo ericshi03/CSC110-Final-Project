@@ -1,0 +1,95 @@
+﻿"Percentage of workforce laid off to adapt to COVID-19, by business characteristics 1 2"
+"Frequency: Occasional Monthly"
+"Table: 33-10-0252-01"
+"Release date: 2020-07-14"
+"Geography: Canada"
+""
+""
+
+"Business characteristics","Less than 1% of workforce laid off due to COVID-19","1% to less than 10% of workforce laid off due to COVID-19","10% to less than 20% of workforce laid off due to COVID-19","20% to less than 30% of workforce laid off due to COVID-19","30% to less than 40% of workforce laid off due to COVID-19","40% to less than 50% of workforce laid off due to COVID-19","50% to less than 60% of workforce laid off due to COVID-19","60% to less than 70% of workforce laid off due to COVID-19","70% to less than 80% of workforce laid off due to COVID-19","80% to less than 90% of workforce laid off due to COVID-19","90% to less than 100% of workforce laid off due to COVID-19","100% of workforce laid off due to COVID-19"
+,"Percent",,,,,,,,,,,
+"Canada, all provinces and territories","71.6A","2.1A","2.3A","3.6A","2.3A","0.7A","3.7A","0.7A","1.5A","2.5A","2.0A","7.0A"
+"Newfoundland and Labrador","70.6A","1.8A","3.3A","5.6A","3.0A","0.9A","2.5A","1.0A","0.6A","1.2A","1.4A","8.3A"
+"Prince Edward Island","73.3B","2.1A","1.4A","3.6A","2.3A","0.3A","2.9A","1.0A","0.9A","2.0A","0.6A","9.6A"
+"Nova Scotia","66.8B","1.3A","2.5A","4.0A","2.4A","1.6A","3.4A","1.6A","0.6A","1.8A","2.0A","11.9A"
+"New Brunswick","70.0A","2.2A","3.0A","3.2A","2.4A","0.8A","3.8A","1.9A","0.6A","2.0A","2.6A","7.4A"
+"Quebec","70.0A","2.5A","1.5A","3.1A","3.3A","0.8A","2.3A","0.5A","2.2A","1.4A","3.3A","9.1A"
+"Ontario","72.9A","2.1A","1.8A","3.8A","2.6A","0.6A","4.3A","0.5A","1.2A","3.8A","1.6A","4.8A"
+"Manitoba","77.1A","2.8A","2.5A","1.1A","0.6A","2.4A","2.4A","1.4A","1.8A","1.5A","2.4A","3.9A"
+"Saskatchewan","71.5A","4.5A","2.4A","3.1A","2.1A","1.1A","5.1A","1.1A","1.1A","1.9A","1.6A","4.7A"
+"Alberta","71.1B","1.0A","2.6A","5.3A","1.6A","0.8A","3.1A","0.5A","3.3A","1.5A","1.4A","7.8A"
+"British Columbia","71.2B","1.7A","3.7A","2.6A","1.0A","0.2A","4.7A","1.2A","0.4A","2.3A","2.0A","8.9A"
+"Territories 3","67.8B","2.6A","5.1A","2.5A","1.7A","0.7A","2.3A","2.7A","2.3A","2.9A","2.0A","7.4A"
+"North American Industry Classification System (NAICS), all industries","71.6A","2.1A","2.3A","3.6A","2.3A","0.7A","3.7A","0.7A","1.5A","2.5A","2.0A","7.0A"
+"Agriculture, forestry, fishing and hunting  [11]","91.2B","0.6A","0.0A","0.5A","0.0A","0.1A","0.7A","0.0A","0.0A","0.0A","0.0A","6.6B"
+"Mining, quarrying, and oil and gas extraction  [21]","74.9B","1.8A","2.1A","2.7A","4.2A","0.4A","3.7A","0.8A","1.6A","0.4A","1.3A","5.9A"
+"Construction  [23]","72.2B","1.1A","2.2A","2.1A","4.3A","0.3A","5.2A","1.3A","0.3A","3.9A","1.5A","5.5A"
+"Manufacturing  [31-33]","69.0B","1.8A","3.9A","3.1A","4.6A","0.5A","4.5A","1.0A","2.3A","1.7A","0.7A","6.9A"
+"Wholesale trade  [41]","70.7B","3.3A","7.2A","7.2A","3.8A","1.0A","2.8A","0.6A","0.3A","1.0A","1.1A","1.1A"
+"Retail trade  [44-45]","68.6B","3.0A","3.1A","5.8A","1.2A","1.3A","3.6A","0.7A","2.2A","4.3B","1.7A","4.4A"
+"Transportation and warehousing  [48-49]","79.2B","1.8A","3.1A","1.9A","1.9A","0.3A","1.9A","0.2A","0.1A","1.1A","3.6A","4.9A"
+"Information and cultural industries  [51]","68.8B","4.0A","6.1A","4.4A","1.9A","1.3A","2.3A","0.2A","0.8A","0.1A","1.2A","8.9B"
+"Finance and insurance  [52]","90.7B","2.5A","1.7A","3.8B","0.8A","0.0A","0.1A","0.0A","0.0A","0.3A","0.0A","0.1A"
+"Real estate and rental and leasing  [53]","90.8B","0.6A","1.2A","1.5A","0.7A","0.1A","0.4A","0.6A","0.0A","0.5A","0.7A","3.0B"
+"Professional, scientific and technical services  [54]","83.6B","0.4A","1.1A","3.1A","0.5A","0.3A","2.6B","0.2A","1.1A","4.4B","0.1A","2.6A"
+"Administrative and support, waste management and remediation services  [56]","54.9C","9.1C","3.2A","2.3A","3.4A","1.2A","6.9B","0.1A","8.1C","0.1A","5.2B","5.4A"
+"Educational services  [61]","..","..","..","..","..","..","..","..","..","..","..",".."
+"Health care and social assistance  [62]","71.1B","3.7A","0.3A","3.0A","1.2A","1.0A","3.3A","0.9A","2.9A","1.4A","2.0A","9.3A"
+"Arts, entertainment and recreation  [71]","57.6C","0.9A","1.7A","0.8A","0.8A","0.2A","7.2B","0.9A","1.5A","3.9A","3.8A","20.7B"
+"Accommodation and food services  [72]","40.2B","1.9A","1.9A","2.8A","3.5A","1.8A","7.0A","2.2A","3.5A","4.9A","8.6A","21.8B"
+"Other services (except public administration)  [81]","66.0B","0.1A","1.0A","7.6B","3.1A","1.0A","4.6A","0.7A","0.1A","1.4A","1.8A","12.5B"
+"Business size of employment, all employment sizes","71.6A","2.1A","2.3A","3.6A","2.3A","0.7A","3.7A","0.7A","1.5A","2.5A","2.0A","7.0A"
+"1 to 4 employees","84.1A","0.6A","0.4A","2.1A","1.0A","0.1A","4.2A","0.3A","0.7A","0.3A","0.3A","5.8A"
+"5 to 19 employees","58.3A","2.9A","3.7A","4.9A","3.6A","1.1A","3.0A","1.1A","2.6A","6.3A","2.8A","9.7A"
+"20 to 99 employees","52.6A","5.2A","6.5A","6.9A","3.9A","2.5A","3.1A","1.7A","2.0A","2.0A","7.4A","6.0A"
+"100 or more employees","54.0A","9.3A","5.6A","4.4A","5.4A","2.2A","4.2A","1.0A","3.7A","5.3A","4.1A","0.9A"
+"Business type, all businesses","71.6A","2.1A","2.3A","3.6A","2.3A","0.7A","3.7A","0.7A","1.5A","2.5A","2.0A","7.0A"
+"Government agencies","76.6D","0.4A","1.0A","1.4A","0.2A","0.2A","0.1A","0.0A","0.5A","2.2A","15.7D","1.7A"
+"Private sector businesses","71.4A","2.1A","2.3A","3.7A","2.2A","0.7A","3.7A","0.7A","1.6A","2.6A","1.9A","7.1A"
+"Non-profit organizations serving households 4","73.9B","1.6A","1.3A","2.2A","3.3A","1.4A","5.4B","1.2A","0.5A","0.9A","2.6A","5.4A"
+"Non-profit organizations serving businesses 5","88.4B","3.1A","0.5A","1.9A","0.0A","0.3A","2.5B","1.3A","1.8A","0.0A","0.1A","0.0A"
+"Age of business, all ages","71.6A","2.1A","2.3A","3.6A","2.3A","0.7A","3.7A","0.7A","1.5A","2.5A","2.0A","7.0A"
+"2 years or less (2018 to 2020)","76.9B","1.2A","0.8A","7.2B","0.4A","0.2A","0.9A","0.1A","1.9A","0.7A","2.3A","7.5A"
+"3 to 10 years (2010 to 2017)","72.3A","2.7A","1.7A","2.2A","2.1A","0.7A","3.7A","0.7A","1.5A","2.3A","2.0A","8.0A"
+"11 to 20 years (2000 to 2009)","71.8B","1.2A","2.3A","2.8A","2.4A","0.3A","4.7A","0.8A","2.0A","4.1A","2.4A","5.4A"
+"More than 20 years (Prior to 2000)","70.0A","2.2A","3.0A","4.7A","2.6A","1.2A","3.6A","0.8A","1.2A","2.0A","1.7A","7.0A"
+"Majority ownership, all ownerships 6","71.6A","2.1A","2.3A","3.6A","2.3A","0.7A","3.7A","0.7A","1.5A","2.5A","2.0A","7.0A"
+"Majority ownership, woman","71.3B","3.3A","1.7A","4.3A","1.1A","0.5A","1.9A","0.5A","1.1A","1.4A","3.8A","9.0A"
+"Majority ownership, First Nations, Métis or Inuit","57.1D","6.6B","1.2A","2.5A","0.3A","0.1A","17.1D","0.4A","0.2A","1.7A","5.5B","7.4C"
+"Majority ownership, visible minority","72.9B","2.7A","1.2A","3.2A","2.5A","0.3A","3.9A","0.3A","1.5A","5.5B","0.1A","5.9A"
+"Majority ownership, immigrant to Canada","93.1B","0.5A","0.2A","0.0A","0.5A","0.9A","0.3A","0.0A","0.0A","0.0A","1.6A","2.8A"
+"Majority ownership, person with a disability","83.9D","0.5A","0.0A","0.0A","0.0A","0.5A","13.1D","0.2A","1.2A","0.4A","0.1A","0.2A"
+"Majority ownership, member of LGBTQ2 community","77.0B","0.8A","2.1A","2.2A","2.0A","0.6A","6.4A","1.5A","0.4A","0.5A","1.6A","5.0A"
+"Majority ownership, prefer not to say","66.8B","2.9A","1.7A","1.3A","1.6A","0.2A","7.3B","0.3A","4.1A","3.6A","2.5A","7.7A"
+"Majority ownership, other","72.2A","1.4A","2.3A","3.8A","2.6A","0.9A","3.5A","0.9A","1.5A","1.7A","1.8A","7.2A"
+"Business activity in the last 12 months, all business activities","71.6A","2.1A","2.3A","3.6A","2.3A","0.7A","3.7A","0.7A","1.5A","2.5A","2.0A","7.0A"
+"Business activity, exported goods or services outside of Canada","73.9B","5.0B","4.2A","4.1A","3.4A","0.5A","4.9B","0.2A","1.2A","0.4A","0.9A","1.4A"
+"Business activity, made investments outside of Canada","71.7D","5.7B","2.5A","11.4C","2.3A","0.3A","0.0A","0.0A","1.0A","0.0A","3.3B","1.9A"
+"Business activity, sold goods to businesses in Canada who then resold them outside of Canada","81.7B","2.0A","4.2A","1.4A","3.1A","1.3A","1.7A","0.1A","0.5A","0.4A","0.6A","2.9A"
+"Business activity, imported goods or services from outside of Canada","69.0B","4.3A","4.0A","4.7A","3.9A","0.9A","1.8A","1.7A","1.2A","1.2A","1.4A","5.7A"
+"Business activity, relocated any business activities or employees from another country into Canada","F","3.9B","3.0A","1.2A","3.0B","1.0A","0.0A","0.0A","0.1A","1.4A","0.2A","F"
+"Business activity, engaged in other international business activities","71.4C","3.0A","7.2B","3.3A","2.5A","0.7A","3.5A","0.1A","0.1A","1.2A","6.2B","0.9A"
+"Business activity, none or other","71.7A","1.4A","2.0A","3.6A","2.1A","0.7A","3.8A","0.6A","1.7A","2.9A","2.1A","7.5A"
+
+Symbol legend:
+.., not available for a specific reference period
+F, too unreliable to be published
+A, data quality: excellent
+B, data quality: very good
+C, data quality: good
+D, data quality: acceptable
+
+
+
+Footnotes:
+1,"Figures may not add to 100% due to rounding."
+2,"Estimates are subject to sampling error. This error can be expressed as a standard error. All estimates contained in this table have been assigned a letter value to indicate the quality of the estimate, as measured by the standard error (expressed as a percentage). A = Excellent (0.00% to less than 2.50%), B = Very good (2.50% to less than 5.00%), C = Good (5.00% to less than 7.50%), D = Acceptable (7.50% to less than 10.00%), E = Use with caution (10.00% to less than 15.00%), F = Too unreliable to be published (Greater than or equal to 15%, data are suppressed)."
+3,"Territories include: Yukon, Northwest Territories, and Nunavut."
+4,"For example: child and youth services, community food services, food bank, women’s shelter, community housing services, emergency relief services, religious organization, grant and giving services, social advocacy group, arts and recreation group."
+5,"For example: business association, chamber of commerce, condominium association, environment support or protection services, group benefit carriers (pensions, health, medical)."
+6,"Majority-owned: Ownership is comprised of 51% or more."
+
+
+
+"How to cite: Statistics Canada. Table 33-10-0252-01  Percentage of workforce laid off to adapt to COVID-19, by business characteristics"
+https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3310025201

@@ -7,6 +7,7 @@ requirements
 """
 
 from dataclasses import dataclass
+import industry
 import csv
 
 
@@ -23,11 +24,8 @@ class Company:
     Representation Invariants:
       - self.market_cap >= 0
       - self.revenue >= 0
-      - self.industry != ''
+      - self.industry.name != ''
 
     Sample Usage:
     >>> pre_covid_apple = Company(market_cap = 87935000000, revenue = 247417000000, industry = 'Technology')
     """
-
-def scrape_file(file: csvfile):
-

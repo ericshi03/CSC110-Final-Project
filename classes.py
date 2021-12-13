@@ -6,6 +6,7 @@ Copyright and Usage Information
 This file is Copyright (c) 2021 Danesh Kohina, Enfei Zhang, Eric Shi, Jefferson Liu
 """
 from dataclasses import dataclass
+import data
 
 
 @dataclass
@@ -31,6 +32,7 @@ class Industry:
     layoffTotals: dict[int]
     expenses: dict[int]
     revenue: dict[int]
+    vulnerability: float
 
 
 class Company:

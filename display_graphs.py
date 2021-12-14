@@ -86,15 +86,4 @@ if __name__ == '__main__':
     #     'extra-imports': ['pandas', 'classes', 'plotly.express'],
     #     'max-line-length': 100
     # })
-    industries = ['Agriculture, forestry, fishing and hunting', 'Mining, quarrying, and oil and gas extraction',
-                  'Construction', 'Manufacturing', 'Wholesale trade', 'Retail trade',
-                  'Transportation and warehousing',
-                  'Information and cultural industries', 'Finance and insurance',
-                  'Real estate and rental and leasing',
-                  'Professional, scientific and technical services', 'Educational services',
-                  'Administrative and support, waste management and remediation services',
-                  'Health care and social assistance', 'Arts, entertainment and recreation',
-                  'Accommodation and food services', 'Other services except public administration']
-    a = [classes.Industry(x) for x in industries]
-    b = convert_to_dataframe(a)
-    display_linear_graphs(b)
+

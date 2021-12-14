@@ -76,8 +76,18 @@ def read_industry_csv_file(filename: str) -> dict[str: list[int]]:
 
 
 def read_company_csv_file(revenue_filename: str, shareprice_filename: str) -> list[float, float, float, float]:
-    """Return
+    """Returns a list of values for the company that is being investigated
 
+    The return value is a list consisting of:
+
+    - The average revenue of the company pre-covid
+    - The average revenue of the company post-covid
+    - The average share prices of the company pre-covid
+    - The average share prices of the company post-covid
+
+    Preconditions:
+      - revenue_filename refers to a valid csv file with data concerning the revenue of the company
+      - shareprice_filename refers to a valid csv file with data concerning the share prices of the same company
     """
     covid_start = dt.date(2020, 3, 1)
     final_data = []

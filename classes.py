@@ -1,9 +1,18 @@
-"""
+"""CSC110 Final Project Classes file
+
+File Description
+================
+This file contains the necessary classes to find the vulnerability of a company/industry
+
 Copyright and Usage Information
 ===============================
+
+This file is provided solely for the personal and private use of
+
 This file is Copyright (c) 2021 Danesh Kohina, Enfei Zhang, Eric Shi, Jefferson Liu
 """
 import data as dt
+import math
 
 
 class Industry:
@@ -30,7 +39,7 @@ class Industry:
 
     def __init__(self, ind: str) -> None:
         """
-        Initialize a new Industry object
+        Initializes a new Industry object
         """
         self.name = ind
         key = ""
@@ -52,15 +61,24 @@ class Industry:
         self.vulnerability = self.calculate_industry_vulnerability()
 
     def calculate_industry_vulnerability(self) -> float:
-        """
-        Returns the vulnerability value of the industry
+        """Calculates the vulnerability value of the industry
+
+        Preconditions:
+        - self.layoff_Percentages is not None
+        - self.expenses is not None
+        - self.revenue is not None
+
+        Sample Usage:
+        >>> Agriculture = Industry("Agriculture")
+        >>> math.isclose(Agriculture.calculate_industry_vulnerability(), 8.426045363636366)
+        True
         """
         average_layoff = 0
-        for value in self.layoffPercentages:
-            if value != max(self.layoffPercentages):
+        for value in self.lay_off_Percentages:
+            if value != max(self.lay_off_Percentages):
                 average_layoff += value
-        layoff_vulnerability = (self.layoffPercentages.index(max(self.layoffPercentages)) + 1 * max(
-            self.layoffPercentages) / 10) + average_layoff / 11
+        layoff_vulnerability = (self.lay_off_Percentages.index(max(self.lay_off_Percentages)) + 1 * max(
+            self.lay_off_Percentages) / 10) + average_layoff / 11
         rev_exp_vuln = ((self.revenue[0] - (self.revenue[3] - self.revenue[2])) + (
                 self.expenses[0] - (self.expenses[3] - self.expenses[2]))) / 1000
         temp_vuln = (rev_exp_vuln + layoff_vulnerability + layoff_vulnerability * rev_exp_vuln) / 2
@@ -87,8 +105,6 @@ class Company:
       - self._revenue_post_covid >= 0
       - self._revenue_pre_covid >= 0
       - self._industry.name != ''
-    Sample Usage:
-    >>> apple = Company('Apple', 150.0, 100.0, 307417000000.0, 247417000000.0,  'Technology')
     """
     _name: str
     _share_price_post_covid: float
@@ -110,8 +126,19 @@ class Company:
         self._industry = Industry(industry)
 
     def calculate_vulnerability_value(self) -> float:
-        """
-        Returns the vulnerability of the company
+        """Calculates the vulnerability value of the industry
+
+        Preconditions:
+        - self._share_price_post_covid is not None
+        - self._share_price_pre_covid is not None
+        - self._revenue_post_covid is not None
+        - self._revenue_pre_covid is not None
+        - self._industry is not None
+
+        Sample Usage:
+        >>> Farmville = Company("Farmville", 25, 30, 200000, 190000, "Agriculture")
+        >>> math.isclose(Farmville.calculate_vulnerability_value(), 196.41131383767754)
+        True
         """
         total_mc = self._share_price_pre_covid + self._share_price_post_covid
         total_r = self._revenue_pre_covid + self._revenue_post_covid

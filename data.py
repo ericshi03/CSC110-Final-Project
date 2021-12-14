@@ -9,8 +9,11 @@ import datetime as dt
 
 
 def is_float(element: str) -> bool:
-    """Function to check if the string can be converted into a float
-
+    """Return whether the string being inputted can be converted to a float value
+    
+    Sample Usage:
+    >>> is_float("1.002")
+    True
     """
     try:
         float(element)

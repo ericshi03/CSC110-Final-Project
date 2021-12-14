@@ -64,7 +64,7 @@ class Industry:
         """Calculates the vulnerability value of the industry
 
         Preconditions:
-        - self.layoff_Percentages is not None
+        - self.lay_off_Percentages is not None
         - self.expenses is not None
         - self.revenue is not None
 

@@ -35,7 +35,8 @@ def display_linear_graphs(df: pandas.DataFrame, factor: Optional[str] = 'Expense
     This function will take in a DataFrame class and will output a graph based on the factor
     specified.
 
-
+    Preconditions:
+        - factor in ['Revenue', 'Expenses', 'Lay Off Percentages']
     """
     # Creates the figure object
     fig = px.scatter(df, x=factor, y='Vulnerability Values', color='Industries',

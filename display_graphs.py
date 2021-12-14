@@ -37,6 +37,7 @@ def display_linear_graphs(df: pandas.DataFrame, factor: Optional[str] = 'Expense
 
     Preconditions:
         - factor in ['Revenue', 'Expenses', 'Lay Off Percentages']
+        - 'Revenue' in b and 'Expenses' in b and 'Lay Off Percentages' in b
     """
     # Creates the figure object
     fig = px.scatter(df, x=factor, y='Vulnerability Values', color='Industries',
@@ -65,6 +66,7 @@ def display_linear_graphs(df: pandas.DataFrame, factor: Optional[str] = 'Expense
     print(results)
 
 
+# Testing code
 if __name__ == '__main__':
     industries = ["Agriculture, forestry, fishing and hunting", "Mining, quarrying, and oil and gas extraction",
                   "Construction", "Manufacturing", "Wholesale trade", "Retail trade",

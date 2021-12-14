@@ -22,9 +22,9 @@ class Industry:
         - all(0 <= p <= 100 for p in self._revenue)
     """
     name: str
-    layoffPercentages: list[int]
-    expenses: list[int]
-    revenue: list[int]
+    layoffPercentages: list[float]
+    expenses: list[float]
+    revenue: list[float]
     vulnerability: float
 
     def __init__(self, ind: str) -> None:

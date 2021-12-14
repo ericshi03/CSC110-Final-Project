@@ -28,7 +28,7 @@ def convert_to_dataframe(values: list[classes.Industry]) -> DataFrame:
     # for loop will go through the list of Industry classes to extract relevant data
     for val in values:
         names.append(val.name)
-        lay_off_per_avg.append(sum(val.lay_off_Percentages) / len(val.lay_off_Percentages))
+        lay_off_per_avg.append(sum(val.lay_off_percentages) / len(val.lay_off_percentages))
         revenue_avg.append(val.revenue[0])
         expenses_avg.append(val.expenses[0])
         vuln_val.append(val.vulnerability)

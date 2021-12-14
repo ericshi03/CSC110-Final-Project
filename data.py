@@ -68,7 +68,7 @@ def read_industry_csv_file(filename: str) -> dict[str: list[int]]:
             if is_float(temp_num):
                 temp_list.append(float(temp_num))
             else:
-                temp_list.append(None)
+                temp_list.append(0)
         temp_string = temp_string[:-2]
         final_data[temp_string] = temp_list
     return final_data

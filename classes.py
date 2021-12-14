@@ -45,14 +45,30 @@ class Industry:
                       "Professional, scientific and technical services", "Educational services",
                       "Administrative and support, waste management and remediation services",
                       "Health care and social assistance", "Arts, entertainment and recreation",
-                      "Accommodation and food services", "Other services"]
+                      "Accommodation and food services", "Other services except public administration"]
         for industry in industries:
             if str.upper(self.name) in str.upper(industry):
                 key = industry
         self.layoffPercentages = dt.read_industry_csv_file("3310025201-eng.csv")[key]
         self.expenses = dt.read_industry_csv_file("3310028201-eng.csv")[key]
         self.revenue = dt.read_industry_csv_file("3310028101-eng.csv")[key]
+        self.vulnerability = self.calculate_industry_vulnerability()
 
+    def calculate_industry_vulnerability(self) -> float:
+        """Calculates the vulnerability value of the industry
+
+
+        """
+        average_layoff = 0
+        for value in self.layoffPercentages:
+            if value != max(self.layoffPercentages):
+                average_layoff += value
+        layoff_vulnerability = (self.layoffPercentages.index(max(self.layoffPercentages)) + 1 * max(
+            self.layoffPercentages) / 10) + average_layoff / 11
+        rev_exp_vuln = ((self.revenue[0] - (self.revenue[3] - self.revenue[2])) + (
+                    self.expenses[0] - (self.expenses[3] - self.expenses[2])))/1000
+        temp_vuln = layoff_vulnerability * rev_exp_vuln
+        return temp_vuln
 
 
 class Company:
@@ -66,15 +82,15 @@ class Company:
 
     Representation Invariants:
       - self.name != ''
-      - self.market_cap >= 0
+      - self.share_price >= 0
       - self.revenue >= 0
       - self.industry.name != ''
 
     Sample Usage:
-    >>> pre_covid_apple = Company(market_cap = 87935000000, revenue = 247417000000, industry = 'Technology')
+    >>> pre_covid_apple = Company(87935000000, 247417000000, Industry('Information'))
     """
     _name: str
-    _market_cap: float
+    _share_price: float
     _revenue: float
     _industry: Industry
 
@@ -83,7 +99,7 @@ class Company:
 
         """
         self._name = name
-        self._market_cap = cap
+        self._share_price = cap
         self._revenue = revenue
         self._industry = Industry(industry)
 
@@ -91,6 +107,6 @@ class Company:
         """Calculates the vulnerability of the company
 
         """
-        vulnerability = self._market_cap + self._revenue
-        vulnerability *= self._industry.vulnerability
+        vulnerability = self._share_price + self._revenue
+        vulnerability *= self._industry.vulnerability / 100
         return vulnerability

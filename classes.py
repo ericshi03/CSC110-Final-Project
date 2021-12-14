@@ -80,6 +80,7 @@ class Company:
       - self.share_price >= 0
       - self.revenue >= 0
       - self.industry.name != ''
+
     Sample Usage:
     >>> pre_covid_apple = Company(87935000000, 247417000000,  'Technology')
     """

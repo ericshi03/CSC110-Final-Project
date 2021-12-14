@@ -80,10 +80,9 @@ def display_linear_graphs(df: DataFrame, factor: Optional[str] = 'Expenses') -> 
 if __name__ == '__main__':
     import python_ta
 
-    # python_ta.check_all(config={
-    #     'disable': ['R1729', 'C0412'],
-    #     'allowed-io': ['display_linear_graphs'],
-    #     'extra-imports': ['pandas', 'classes', 'plotly.express'],
-    #     'max-line-length': 100
-    # })
-
+    python_ta.check_all(config={
+        'disable': ['R1729', 'C0412'],
+        'allowed-io': ['display_linear_graphs'],
+        'extra-imports': ['pandas', 'classes', 'plotly.express'],
+        'max-line-length': 100
+    })

@@ -1,0 +1,17 @@
+# CSC110 Final Project Packages
+
+# Testing and code checking
+hypothesis
+pytest
+python-ta
+
+# Data analysis
+pandas
+statsmodels
+numpy
+scipy
+patsy
+
+# Graphics and data visualization
+plotly
+pygame==2.0.0.dev10

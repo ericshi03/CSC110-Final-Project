@@ -50,8 +50,8 @@ class Industry:
                       'Real estate and rental and leasing',
                       'Professional, scientific and technical services', 'Educational services',
                       'Administrative and support, waste management and remediation services',
-                      'Health care and social assistance", "Arts, entertainment and recreation',
-                      'Accommodation and food services", "Other services except public administration']
+                      'Health care and social assistance', 'Arts, entertainment and recreation',
+                      'Accommodation and food services', 'Other services except public administration']
         for industry in industries:
             if str.upper(self.name) in str.upper(industry):
                 key = industry

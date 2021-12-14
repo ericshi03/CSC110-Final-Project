@@ -67,7 +67,7 @@ class Industry:
             self.layoffPercentages) / 10) + average_layoff / 11
         rev_exp_vuln = ((self.revenue[0] - (self.revenue[3] - self.revenue[2])) + (
                     self.expenses[0] - (self.expenses[3] - self.expenses[2])))/1000
-        temp_vuln = layoff_vulnerability * rev_exp_vuln
+        temp_vuln = (rev_exp_vuln + layoff_vulnerability + layoff_vulnerability * rev_exp_vuln) / 2
         return temp_vuln
 
 
@@ -108,5 +108,5 @@ class Company:
 
         """
         vulnerability = self._share_price + self._revenue
-        vulnerability *= self._industry.vulnerability / 100
+        vulnerability *= self._industry.vulnerability / 10
         return vulnerability

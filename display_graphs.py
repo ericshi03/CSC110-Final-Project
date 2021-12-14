@@ -10,10 +10,10 @@ of our choosing.
 from typing import Optional
 from pandas import DataFrame
 import plotly.express as px
-from classes import Industry
+import classes
 
 
-def convert_to_dataframe(values: list[Industry]) -> DataFrame:
+def convert_to_dataframe(values: list[classes.Industry]) -> DataFrame:
     """
     This function will convert the list of Industries into a dataframe class to ensure
     ease of use when working with plotly.
@@ -77,34 +77,33 @@ def display_linear_graphs(df: DataFrame, factor: Optional[str] = 'Expenses') -> 
 
 # Testing code
 if __name__ == '__main__':
-    import python_ta.contracts
-
-    python_ta.contracts.DEBUG_CONTRACTS = False
-    python_ta.contracts.check_all_contracts()
-
-    import doctest
-
-    doctest.testmod()
-
-    import python_ta
-
-    python_ta.check_all(config={
-        'disable': ['R1729', 'C0412'],
-        'extra-imports': ['pandas', 'classes', 'plotly.express'],
-        'max-line-length': 100
-    })
-
-    # industries = ["Agriculture, forestry, fishing and hunting", "Mining, quarrying, and oil and gas extraction",
-    #               "Construction", "Manufacturing", "Wholesale trade", "Retail trade",
-    #               "Transportation and warehousing",
-    #               "Information and cultural industries", "Finance and insurance",
-    #               "Real estate and rental and leasing",
-    #               "Professional, scientific and technical services", "Educational services",
-    #               "Administrative and support, waste management and remediation services",
-    #               "Health care and social assistance", "Arts, entertainment and recreation",
-    #               "Accommodation and food services", "Other services except public administration"]
-    # a = [classes.Industry(x) for x in industries]
-    # b = convert_to_dataframe(a)
-    # display_linear_graphs(b)
-    # display_linear_graphs(b, 'Revenue')
-    # display_linear_graphs(b, 'Lay Off Percentages')
+    # import python_ta.contracts
+    #
+    # python_ta.contracts.DEBUG_CONTRACTS = False
+    # python_ta.contracts.check_all_contracts()
+    #
+    # import doctest
+    #
+    # doctest.testmod()
+    #
+    # import python_ta
+    #
+    # python_ta.check_all(config={
+    #     'disable': ['R1729', 'C0412'],
+    #     'extra-imports': ['pandas', 'classes', 'plotly.express'],
+    #     'max-line-length': 100
+    # })
+    industries = ["Agriculture, forestry, fishing and hunting", "Mining, quarrying, and oil and gas extraction",
+                  "Construction", "Manufacturing", "Wholesale trade", "Retail trade",
+                  "Transportation and warehousing",
+                  "Information and cultural industries", "Finance and insurance",
+                  "Real estate and rental and leasing",
+                  "Professional, scientific and technical services", "Educational services",
+                  "Administrative and support, waste management and remediation services",
+                  "Health care and social assistance", "Arts, entertainment and recreation",
+                  "Accommodation and food services", "Other services except public administration"]
+    a = [classes.Industry(x) for x in industries]
+    b = convert_to_dataframe(a)
+    display_linear_graphs(b)
+    display_linear_graphs(b, 'Revenue')
+    display_linear_graphs(b, 'Lay Off Percentages')

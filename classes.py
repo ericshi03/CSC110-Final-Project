@@ -32,7 +32,7 @@ class Industry:
         - all(0 <= p <= 100 for p in self.revenue)
     """
     name: str
-    layoffPercentages: list[float]
+    lay_off_Percentages: list[float]
     expenses: list[float]
     revenue: list[float]
     vulnerability: float

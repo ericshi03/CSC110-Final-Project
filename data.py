@@ -5,6 +5,7 @@ Copyright and Usage Information
 
 This file is Copyright (c) 2021 Danesh Kohina, Enfei Zhang, Eric Shi, Jefferson Liu
 """
+import datetime as dt
 
 
 def is_float(element: str) -> bool:
@@ -74,5 +75,46 @@ def read_industry_csv_file(filename: str) -> dict[str: list[int]]:
     return final_data
 
 
-def read_company_csv_file(filename: str) -> list:
-    return []
+def read_company_csv_file(revenue_filename: str, shareprice_filename: str) -> list[float, float, float, float]:
+    """Return
+
+    """
+    covid_start = dt.datetime(2020, 3, 1)
+    final_data = []
+    with open(revenue_filename) as file:
+        temp_data = file.readlines()
+
+    clean_temp = []
+    pre_covid_revenue = 0
+    post_covid_revenue = 0
+
+    with open(shareprice_filename) as file:
+        temp_data = file.readlines()
+
+    clean_temp = []
+    pre_covid_share = 0
+    post_covid_share = 0
+    for x in range(1, len(temp_data)):
+        temp_list = []
+        temp = temp_data[x].split(",")
+        temp_date = temp[0].split("/")
+        temp_list.append(dt.date(int(temp_date[2]), int(temp_date[0]), int(temp_date[1])))
+        for y in range(1, len(temp)):
+            temp_value = ''
+            for char in temp[y]:
+                if ord(char) == 46 or 48 <= ord(char) <= 57:
+                    temp_value += char
+            temp_list.append(float(temp_value))
+        clean_temp.append(temp_list)
+
+    count = 0
+    for share in clean_temp:
+        if share[0] < covid_start:
+            pre_covid_share += (share[1] + share[3] + share[4] + share[5])/4
+            count += 1
+        else:
+            post_covid_share += (share[1] + share[3] + share[4] + share[5]) / 4
+
+    final_data.append(pre_covid_share/count)
+    final_data.append(post_covid_share/(len(clean_temp) - count))
+    return final_data

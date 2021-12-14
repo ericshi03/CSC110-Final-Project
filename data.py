@@ -114,25 +114,8 @@ def read_company_csv_file(revenue_filename: str, shareprice_filename: str) -> \
     pre_covid_revenue = 0
     post_covid_revenue = 0
 
-    for line in range(len(temp_data) - 1):
-        temp_list = []
-        temp = temp_data[line].split('\"')
-        temp_date = temp[0].split('/')
-        clean_temp_date = []
-        for value in temp_date:
-            temp_num = ''
-            for char in value:
-                if 48 <= ord(char) <= 57:
-                    temp_num += char
-            clean_temp_date.append(temp_num)
-        temp_list.append(dt.date(int(clean_temp_date[2]),
-                                 int(clean_temp_date[0]), int(clean_temp_date[1])))
-        temp_value = ''
-        for char in temp[1]:
-            if ord(char) == 46 or 48 <= ord(char) <= 57:
-                temp_value += char
-        temp_list.append(float(temp_value))
-        clean_temp.append(temp_list)
+   ############
+    read_company_helper_function(temp_data, clean_temp)
 
     count = 0
     for rev in clean_temp:
@@ -176,6 +159,31 @@ def read_company_csv_file(revenue_filename: str, shareprice_filename: str) -> \
     final_data.append(pre_covid_share / count)
     final_data.append(post_covid_share / (len(clean_temp) - count))
     return final_data
+
+
+def read_company_helper_function(temp_data: list[str], clean_temp: list) -> None:
+    """
+    This function will help the read_company_csv_file process the data
+    """
+    for line in range(len(temp_data) - 1):
+        temp_list = []
+        temp = temp_data[line].split('\"')
+        temp_date = temp[0].split('/')
+        clean_temp_date = []
+        for value in temp_date:
+            temp_num = ''
+            for char in value:
+                if 48 <= ord(char) <= 57:
+                    temp_num += char
+            clean_temp_date.append(temp_num)
+        temp_list.append(dt.date(int(clean_temp_date[2]),
+                                 int(clean_temp_date[0]), int(clean_temp_date[1])))
+        temp_value = ''
+        for char in temp[1]:
+            if ord(char) == 46 or 48 <= ord(char) <= 57:
+                temp_value += char
+        temp_list.append(float(temp_value))
+        clean_temp.append(temp_list)
 
 
 if __name__ == '__main__':

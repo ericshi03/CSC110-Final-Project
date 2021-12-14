@@ -1,7 +1,16 @@
-"""
+"""CSC110 Final Project Data file
+
+File Description
+================
+This file contains the necessary functions to convert the .csv files to be usable for
+our function
 
 Copyright and Usage Information
 ===============================
+
+This file is provided solely for the personal and private use of anyone who wishes to use it.
+All forms of distribution of this code, whether as given or with any changes, are expressly
+prohibited.
 
 This file is Copyright (c) 2021 Danesh Kohina, Enfei Zhang, Eric Shi, Jefferson Liu
 """

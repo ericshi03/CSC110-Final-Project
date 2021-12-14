@@ -1,13 +1,20 @@
-"""
-Copyright and Usage Information
-===============================
-This file is Copyright (c) 2021 Danesh Kohina, Enfei Zhang, Eric Shi, Jefferson Liu
+"""CSC110 Final Project Display Graphs file
+
+File Description
+================
 
 This file will take in data and use the plotly, statsmodel, and pandas modules to
 graphically represent the correlation between our calculated risk factor and a factor
 of our choosing.
 
-Author: Eric Shi
+Copyright and Usage Information
+===============================
+
+This file is provided solely for the personal and private use of anyone who wishes to use it.
+All forms of distribution of this code, whether as given or with any changes, are expressly
+prohibited.
+
+This file is Copyright (c) 2021 Danesh Kohina, Enfei Zhang, Eric Shi, Jefferson Liu
 """
 from typing import Optional
 from pandas import DataFrame

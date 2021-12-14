@@ -72,3 +72,7 @@ def read_industry_csv_file(filename: str) -> dict[str: list[int]]:
         temp_string = temp_string[:-2]
         final_data[temp_string] = temp_list
     return final_data
+
+
+def read_company_csv_file(filename: str) -> list:
+    return []

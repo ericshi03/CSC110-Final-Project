@@ -1,8 +1,13 @@
 """
+Copyright and Usage Information
+===============================
+This file is Copyright (c) 2021 Danesh Kohina, Enfei Zhang, Eric Shi, Jefferson Liu
+
 TODO: ADD UNITS TO THE VALUES
 
-This file will take in data and using the plotly, pandas, and statsmodels class, will output
-a graph of the inputted relation with an analysis being printed as well.
+This file will take in data and use the plotly, statsmodel, and pandas modules to
+graphically represent the correlation between our calculated risk factor and a factor
+of our choosing.
 """
 import pandas
 import plotly.express as px
@@ -12,19 +17,22 @@ from typing import Optional
 
 def convert_to_dataframe(values: list[classes.Industry]):
     """
-    This function will convert the list of Industries into a dataframe.
+    This function will convert the list of Industries into a dataframe class to ensure
+    ease of use when working with plotly.
     """
     names = []
     lay_off_per_avg = []
     revenue_avg = []
     expenses_avg = []
     vuln_val = []
+    # for loop will go through the list of Industry classes to extract relevant data
     for val in values:
         names.append(val.name)
         lay_off_per_avg.append(sum(val.layoffPercentages) / len(val.layoffPercentages))
         revenue_avg.append(val.revenue[0])
         expenses_avg.append(val.expenses[0])
         vuln_val.append(val.vulnerability)
+    # Extra line for improved clarity
     processed_values = {'Industries': names, 'Lay Off Percentages': lay_off_per_avg, 'Revenue': revenue_avg,
                         'Expenses': expenses_avg, 'Vulnerability Values': vuln_val}
     return pandas.DataFrame(data=processed_values)
@@ -33,7 +41,8 @@ def convert_to_dataframe(values: list[classes.Industry]):
 def display_linear_graphs(df: pandas.DataFrame, factor: Optional[str] = 'Expenses') -> None:
     """
     This function will take in a DataFrame class and will output a graph based on the factor
-    specified.
+    specified. This function will also perform a Linear Regression on the graph to determine
+    a value of R^2.
 
     Preconditions:
         - factor in ['Revenue', 'Expenses', 'Lay Off Percentages']
@@ -68,17 +77,34 @@ def display_linear_graphs(df: pandas.DataFrame, factor: Optional[str] = 'Expense
 
 # Testing code
 if __name__ == '__main__':
-    industries = ["Agriculture, forestry, fishing and hunting", "Mining, quarrying, and oil and gas extraction",
-                  "Construction", "Manufacturing", "Wholesale trade", "Retail trade",
-                  "Transportation and warehousing",
-                  "Information and cultural industries", "Finance and insurance",
-                  "Real estate and rental and leasing",
-                  "Professional, scientific and technical services", "Educational services",
-                  "Administrative and support, waste management and remediation services",
-                  "Health care and social assistance", "Arts, entertainment and recreation",
-                  "Accommodation and food services", "Other services except public administration"]
-    a = [classes.Industry(x) for x in industries]
-    b = convert_to_dataframe(a)
-    display_linear_graphs(b)
-    display_linear_graphs(b, 'Revenue')
-    display_linear_graphs(b, 'Lay Off Percentages')
+    import python_ta.contracts
+
+    python_ta.contracts.DEBUG_CONTRACTS = False
+    python_ta.contracts.check_all_contracts()
+
+    import doctest
+
+    doctest.testmod()
+
+    import python_ta
+
+    python_ta.check_all(config={
+        'disable': ['R1729', 'C0412'],
+        'extra-imports': ['python_ta.contracts', 'hypothesis.strategies'],
+        'max-line-length': 100
+    })
+
+    # industries = ["Agriculture, forestry, fishing and hunting", "Mining, quarrying, and oil and gas extraction",
+    #               "Construction", "Manufacturing", "Wholesale trade", "Retail trade",
+    #               "Transportation and warehousing",
+    #               "Information and cultural industries", "Finance and insurance",
+    #               "Real estate and rental and leasing",
+    #               "Professional, scientific and technical services", "Educational services",
+    #               "Administrative and support, waste management and remediation services",
+    #               "Health care and social assistance", "Arts, entertainment and recreation",
+    #               "Accommodation and food services", "Other services except public administration"]
+    # a = [classes.Industry(x) for x in industries]
+    # b = convert_to_dataframe(a)
+    # display_linear_graphs(b)
+    # display_linear_graphs(b, 'Revenue')
+    # display_linear_graphs(b, 'Lay Off Percentages')

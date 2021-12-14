@@ -22,8 +22,8 @@ def convert_to_dataframe(values: list[classes.Industry]):
     for val in values:
         names.append(val.name)
         lay_off_per_avg.append(sum(val.layoffPercentages) / len(val.layoffPercentages))
-        revenue_avg.append(sum(val.revenue) / len(val.revenue))
-        expenses_avg.append(sum(val.expenses) / len(val.expenses))
+        revenue_avg.append(val.revenue[0])
+        expenses_avg.append(val.expenses[0])
         vuln_val.append(val.vulnerability)
     processed_values = {'Industries': names, 'Lay Off Percentages': lay_off_per_avg, 'Revenue': revenue_avg,
                         'Expenses': expenses_avg, 'Vulnerability Values': vuln_val}

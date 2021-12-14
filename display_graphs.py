@@ -1,39 +1,47 @@
 """
-TODO: ADD UNITS TO THE VALUES
+Copyright and Usage Information
+===============================
+This file is Copyright (c) 2021 Danesh Kohina, Enfei Zhang, Eric Shi, Jefferson Liu
 
-This file will take in data and using the plotly, pandas, and statsmodels class, will output
-a graph of the inputted relation with an analysis being printed as well.
+This file will take in data and use the plotly, statsmodel, and pandas modules to
+graphically represent the correlation between our calculated risk factor and a factor
+of our choosing.
 """
-import pandas
+from typing import Optional
+from pandas import DataFrame
 import plotly.express as px
 import classes
-from typing import Optional
 
 
-def convert_to_dataframe(values: list[classes.Industry]):
+def convert_to_dataframe(values: list[classes.Industry]) -> DataFrame:
     """
-    This function will convert the list of Industries into a dataframe.
+    This function will convert the list of Industries into a dataframe class to ensure
+    ease of use when working with plotly.
     """
     names = []
     lay_off_per_avg = []
     revenue_avg = []
     expenses_avg = []
     vuln_val = []
+    # for loop will go through the list of Industry classes to extract relevant data
     for val in values:
         names.append(val.name)
         lay_off_per_avg.append(sum(val.layoffPercentages) / len(val.layoffPercentages))
         revenue_avg.append(val.revenue[0])
         expenses_avg.append(val.expenses[0])
         vuln_val.append(val.vulnerability)
-    processed_values = {'Industries': names, 'Lay Off Percentages': lay_off_per_avg, 'Revenue': revenue_avg,
-                        'Expenses': expenses_avg, 'Vulnerability Values': vuln_val}
-    return pandas.DataFrame(data=processed_values)
+    # Extra line for improved clarity
+    processed_values = {'Industries': names, 'Lay Off Percentages': lay_off_per_avg,
+                        'Revenue': revenue_avg, 'Expenses': expenses_avg,
+                        'Vulnerability Values': vuln_val}
+    return DataFrame(data=processed_values)
 
 
-def display_linear_graphs(df: pandas.DataFrame, factor: Optional[str] = 'Expenses') -> None:
+def display_linear_graphs(df: DataFrame, factor: Optional[str] = 'Expenses') -> None:
     """
     This function will take in a DataFrame class and will output a graph based on the factor
-    specified.
+    specified. This function will also perform a Linear Regression on the graph to determine
+    a value of R^2.
 
     Preconditions:
         - factor in ['Revenue', 'Expenses', 'Lay Off Percentages']
@@ -57,7 +65,8 @@ def display_linear_graphs(df: pandas.DataFrame, factor: Optional[str] = 'Expense
         shift = 0
 
     fig.add_annotation(x=shift, text='R<sup>2</sup> = '
-                                     + str(rfinder[0]) + '<br> Adjusted R<sup>2</sup> = ' + str(rfinder[1]),
+                                     + str(rfinder[0]) + '<br> Adjusted R<sup>2</sup> = '
+                                     + str(rfinder[1]),
                        showarrow=False,
                        xshift=1000,
                        yshift=-100)
@@ -68,6 +77,22 @@ def display_linear_graphs(df: pandas.DataFrame, factor: Optional[str] = 'Expense
 
 # Testing code
 if __name__ == '__main__':
+    # import python_ta.contracts
+    #
+    # python_ta.contracts.DEBUG_CONTRACTS = False
+    # python_ta.contracts.check_all_contracts()
+    #
+    # import doctest
+    #
+    # doctest.testmod()
+    #
+    # import python_ta
+    #
+    # python_ta.check_all(config={
+    #     'disable': ['R1729', 'C0412'],
+    #     'extra-imports': ['pandas', 'classes', 'plotly.express'],
+    #     'max-line-length': 100
+    # })
     industries = ["Agriculture, forestry, fishing and hunting", "Mining, quarrying, and oil and gas extraction",
                   "Construction", "Manufacturing", "Wholesale trade", "Retail trade",
                   "Transportation and warehousing",

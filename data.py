@@ -52,33 +52,40 @@ def read_industry_csv_file(filename: str) -> dict[str: list[int]]:
             clean_temp.append(line.split("\""))
 
     for item in clean_temp:
-        count = sum([1 for y in item if y == ','])
-        for _ in range(count):
-            item.remove(",")
-        count = sum(1 for y in item if y == "\n")
-        for _ in range(count):
-            item.remove("\n")
-        count = sum(1 for y in item if y == "")
-        for _ in range(count):
-            item.remove("")
-        temp_string = ""
-        temp_list = []
-        for char in item[0]:
-            if ord(char) == 32 or ord(char) == 44 or 65 <= ord(char) \
-                    <= 90 or 97 <= ord(char) <= 122:
-                temp_string += char
-        for x in range(1, len(item)):
-            temp_num = ""
-            for char in item[x]:
-                if ord(char) == 46 or 48 <= ord(char) <= 57:
-                    temp_num += char
-            if is_float(temp_num):
-                temp_list.append(float(temp_num))
-            else:
-                temp_list.append(0)
-        temp_string = temp_string[:-2]
-        final_data[temp_string] = temp_list
+        read_industry_helper(item, final_data)
     return final_data
+
+
+def read_industry_helper(item: list[str], final_data: dict[str:list[int]]) -> None:
+    """
+    This is a helper function that will do most of the heavy computations
+    """
+    count = sum([1 for y in item if y == ','])
+    for _ in range(count):
+        item.remove(",")
+    count = sum(1 for y in item if y == "\n")
+    for _ in range(count):
+        item.remove("\n")
+    count = sum(1 for y in item if y == "")
+    for _ in range(count):
+        item.remove("")
+    temp_string = ""
+    temp_list = []
+    for char in item[0]:
+        if ord(char) == 32 or ord(char) == 44 or 65 <= ord(char) \
+                <= 90 or 97 <= ord(char) <= 122:
+            temp_string += char
+    for x in range(1, len(item)):
+        temp_num = ""
+        for char in item[x]:
+            if ord(char) == 46 or 48 <= ord(char) <= 57:
+                temp_num += char
+        if is_float(temp_num):
+            temp_list.append(float(temp_num))
+        else:
+            temp_list.append(0)
+    temp_string = temp_string[:-2]
+    final_data[temp_string] = temp_list
 
 
 def read_company_csv_file(revenue_filename: str, shareprice_filename: str) -> \

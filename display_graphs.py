@@ -6,6 +6,8 @@ This file is Copyright (c) 2021 Danesh Kohina, Enfei Zhang, Eric Shi, Jefferson 
 This file will take in data and use the plotly, statsmodel, and pandas modules to
 graphically represent the correlation between our calculated risk factor and a factor
 of our choosing.
+
+Author: Eric Shi
 """
 from typing import Optional
 from pandas import DataFrame
@@ -78,9 +80,21 @@ def display_linear_graphs(df: DataFrame, factor: Optional[str] = 'Expenses') -> 
 if __name__ == '__main__':
     import python_ta
 
-    python_ta.check_all(config={
-        'disable': ['R1729', 'C0412'],
-        'allowed-io': ['display_linear_graphs'],
-        'extra-imports': ['pandas', 'classes', 'plotly.express'],
-        'max-line-length': 100
-    })
+    # python_ta.check_all(config={
+    #     'disable': ['R1729', 'C0412'],
+    #     'allowed-io': ['display_linear_graphs'],
+    #     'extra-imports': ['pandas', 'classes', 'plotly.express'],
+    #     'max-line-length': 100
+    # })
+    industries = ['Agriculture, forestry, fishing and hunting', 'Mining, quarrying, and oil and gas extraction',
+                  'Construction', 'Manufacturing', 'Wholesale trade', 'Retail trade',
+                  'Transportation and warehousing',
+                  'Information and cultural industries', 'Finance and insurance',
+                  'Real estate and rental and leasing',
+                  'Professional, scientific and technical services', 'Educational services',
+                  'Administrative and support, waste management and remediation services',
+                  'Health care and social assistance', 'Arts, entertainment and recreation',
+                  'Accommodation and food services', 'Other services except public administration']
+    a = [classes.Industry(x) for x in industries]
+    b = convert_to_dataframe(a)
+    display_linear_graphs(b)

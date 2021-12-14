@@ -32,7 +32,7 @@ class Industry:
         - all(0 <= p <= 100 for p in self.revenue)
     """
     name: str
-    layoffPercentages: list[float]
+    lay_off_Percentages: list[float]
     expenses: list[float]
     revenue: list[float]
     vulnerability: float
@@ -152,3 +152,14 @@ class Company:
         vulnerability = percentage_change_in_mc + percentage_change_in_r
         vulnerability *= self._industry.vulnerability
         return vulnerability
+
+
+if __name__ == '__main__':
+    import python_ta
+
+    python_ta.check_all(config={
+        'disable': ['R1729', 'C0412'],
+        'allowed-io': ['display_linear_graphs'],
+        'extra-imports': ['pandas', 'classes', 'plotly.express'],
+        'max-line-length': 100
+    })

@@ -10,7 +10,6 @@ import datetime as dt
 
 def is_float(element: str) -> bool:
     """Function to check if the string can be converted into a float
-
     """
     try:
         float(element)
@@ -125,7 +124,7 @@ def read_company_csv_file(revenue_filename: str, shareprice_filename: str) -> li
         else:
             post_covid_revenue += rev[1]
 
-    final_data.append(pre_covid_revenue/count)
+    final_data.append(pre_covid_revenue / count)
     final_data.append(post_covid_revenue/(len(clean_temp) - count))
 
     with open(shareprice_filename) as file:
@@ -159,3 +158,14 @@ def read_company_csv_file(revenue_filename: str, shareprice_filename: str) -> li
     final_data.append(pre_covid_share/count)
     final_data.append(post_covid_share/(len(clean_temp) - count))
     return final_data
+
+
+if __name__ == '__main__':
+    import python_ta
+
+    python_ta.check_all(config={
+        'disable': ['R1729', 'C0412'],
+        'allowed-io': ['display_linear_graphs'],
+        'extra-imports': ['datetime'],
+        'max-line-length': 100
+    })

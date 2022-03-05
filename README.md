@@ -1,9 +1,11 @@
-# CSC110-Final-Project
-CSC110 Final Project
+# Vulnerability Score Calculator
 
-This is the read me for our CSC110 Final Project.
+In this project we aim to answer the question "Which industries are must vulnerable during the pandemic?". 
 
-Ideally, the updated project proposal will go in here along with
-links to our data sets and our references. 
+To accomplish this, we analyze several datasets which pertain to the hiring rate, revenue, and stock price during the period from 2018-2020.
 
-In addition, it may be a good idea to use this a pseudo check list.
+After reading in said datasets, a vulnerability score will be calculated based off of the values found.
+
+We will then plot our vulnerability score against our datasets to display the trend.
+
+
